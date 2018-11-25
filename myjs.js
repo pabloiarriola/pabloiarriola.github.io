@@ -16,7 +16,7 @@ function validate(e) {
 }
 
 function httpGet(){
-  $.get("http://34.210.35.174:7000/", function(responseText) {
+  $.get("https://34.210.35.174:7000/", function(responseText) {
     for(i=0;i<responseText.length;i++){
       chat.innerHTML += '<div class="messages"> <p style="font-weight: bold;">'+ responseText[i].nick +':</p> ' + responseText[i].text + '</div>'
     }
@@ -28,7 +28,7 @@ function httpGet(){
 
 function httpPOST(){
 	
-  const ip = "http://34.210.35.174:7000";
+  const ip = "https://34.210.35.174:7000";
   envio = new FormData();
   envio.append("student_id",document.getElementById('student_id').value);
   envio.append("text",document.getElementById('message').value);
